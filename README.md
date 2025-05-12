@@ -25,11 +25,12 @@ Se usó **ROC-AUC** como métrica principal de evaluación, dada la naturaleza d
 Antes de construir los modelos, se realizó un análisis detallado de la distribución de los datos y sus relaciones con la variable objetivo (`default.payment.next.month`).
 
 - **Distribución por género:** El 60.4% de los clientes son mujeres y el 39.6% son hombres. Las tasas de incumplimiento son similares entre ambos grupos.
-- **Variables más relevantes:** Las variables más correlacionadas con el incumplimiento son los estados de pago anteriores (`PAY_0`, `PAY_2`, etc.), lo que tiene sentido desde un punto de vista financiero.
+- **Edad:** La mayoría de los clientes se encuentra entre los 25 y 45 años. Se observó que los clientes más jóvenes (25–35 años) presentan una **mayor proporción de incumplimiento**, aunque la diferencia no es extrema.
+- **Variables más relevantes:** Las variables más correlacionadas con el incumplimiento son los **estados de pago anteriores** (`PAY_0`, `PAY_2`, etc.), lo que concuerda con la lógica de historial crediticio.
 - **Correlación entre variables:** Se identificaron grupos de variables altamente correlacionadas, como las facturaciones mensuales (`BILL_AMT1` a `BILL_AMT6`), lo que sugiere que podrían ser simplificadas o reducidas.
-- **No se aplicó PCA** porque las correlaciones no justifican una reducción de dimensiones, aunque se sugiere para futuras versiones.
+- **No se aplicó PCA**, ya que las correlaciones no justifican una reducción significativa de dimensiones, aunque puede considerarse en futuras versiones.
 
-Este análisis ayuda a comprender mejor el dataset y a construir modelos más informados.
+Este análisis ayuda a comprender mejor el dataset y a construir modelos más informados y confiables.
 
 ---
 
